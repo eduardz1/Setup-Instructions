@@ -9,7 +9,7 @@
     <!-- TODO -->
 4. Set up static ip address for the raspberry pi:
     - `sudo nano /etc/dhcpcd.conf`
-    - `add 'dhcp-host=ab:cd:ef:12:34:56,example-host,192.168.0.10,infinite', where ab:cd:ef:12:34:56 is the mac address of the raspberry pi, example-host is the hostname of the raspberry pi, and infinite is the lease time`
+    - add `dhcp-host=ab:cd:ef:12:34:56,example-host,192.168.0.10,infinite`, where `ab:cd:ef:12:34:56` is the mac address of the raspberry pi, `example-host` is the hostname of the raspberry pi, and `infinite` is the lease time`
 
 ## Solve hostapd service being masked (inactive)
 

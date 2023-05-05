@@ -147,3 +147,20 @@ value = adc.read(channel = 0) # You can of course adapt he channel to be read ou
 print("Applied voltage: %.2f" % (value / 1023.0 * 3.3))
 
 ```
+
+## Connect raspberry pi NoIR camera
+
+1. Connect the camera to the raspberry pi
+2. It is possible that we need to modify the `/boot/config.txt` file to enable the camera:
+    - `sudo nano /boot/config.txt`
+    - uncomment the line `start_x=1`
+    - uncomment the line `gpu_mem=128`
+    - save and exit
+    - reboot
+3. Install dependencies:
+    - `sudo apt-get update`
+    - `sudo apt-get install -y python3-pyqt5 python3-opengl`
+    - `sudo apt-get install -y python3-picamera2 --no-install-recommends`
+    - `sudo pip3 install -U numpy`
+    - `sudo pip3 install opencv-python`
+    - `sudo apt install -y libatlas-base-dev`
